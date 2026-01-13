@@ -1,0 +1,8 @@
+version: '3'
+services:
+  myapp:
+    image: myapp:latest           # Use your local Docker image
+    container_name: myapp_container_compose
+    ports:
+      - "8081:8080"               # Host port:Container port
+    restart: unless-stopped       # Automatically restart if it crashes
